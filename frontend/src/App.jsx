@@ -1,22 +1,31 @@
-
+import {BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Movie from './components/Movie'
+import Home from './pages/Home'
+import Catalog from './pages/Catalog'
+import About from './pages/About'
+import NoPage from './pages/nopage'
+import Navigation from './pages/navigation'
 
 function App() {
 
-  const movies = [
-    {id: 1, title: "Spiderman" , review: "6.5", genre:"actie"},
-    {id: 2, title: "Batman" , review: "9.5", genre:"actie"},
-    {id: 3, title: "Sneeuwitje" , review: "6.5", genre:"fantasy"}
-  ]
+  
+  
 
   return (
-    <section className='container'>
-      <h1>Filmguru</h1>
-     {movies.map((movie) => (
-      <Movie title={movie.title} review={movie.review} genre={movie.genre}/>
-     ))}
-    </section>
+   
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Navigation/>}>
+        <Route index element={<Home />}/>
+        <Route path='/home' element={<Home />}/>
+        <Route path='/catalog' element={<Catalog />}/>
+        <Route path='/about' element={<About />}/>
+        <Route path='*' element={<NoPage />}/>
+        </Route>
+      </Routes>
+      </BrowserRouter>
+
+   
 
 
 
