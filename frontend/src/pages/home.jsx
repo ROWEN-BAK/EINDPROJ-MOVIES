@@ -2,22 +2,23 @@ import Movie from '../components/Movie'
 
 function Home() {
 
-  const movies = [
-    {id: 1, title: "Spiderman" , review: "8.5", genre:"actie"},
-    {id: 2, title: "Batman" , review: "9.7", genre:"actie"},
-    {id: 3, title: "The Hobbit" , review: "9.5", genre:"fantasy"}
-  ]
-
   return (
-    <section className='container'>
-      <h1>Filmguru</h1>
-     {movies.map((movie) => (
-      <Movie title={movie.title} review={movie.review} genre={movie.genre}/>
-     ))}
-    </section>
+<section className="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center text-center p-6">
+  <h1 className="text-4xl md:text-5xl font-bold mb-4">Welkom bij FilmGuru</h1>
+  <p className="text-lg md:text-xl max-w-2xl">
+    Welkom bij <span className="text-red-400 font-semibold">FilmGuru</span>, 
+    de nummer 1 website voor het inzien van films.
+  </p>
 
+  <div className='moviesContainer w-full flex justify-evenly '>
+  <Movie title="spiderman" genre="actie" review="9.6" image=""/>
+  <Movie title="The Hobbit" genre="fantasy" review="8.5" image=""/>
+  <Movie title="The Dark Knight" genre="actie" review="9.3" image=""/>
+  </div>
 
-
+  {/* vul het bovenste component aan met review, image. Zorg dat het nu op het scherm komt te staan.
+  nu je de data hebt, is het de bedoeling dat je de movie styled. De styling doe je in Movies.jsx */}
+</section>
   )
 }
 

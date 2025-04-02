@@ -9,6 +9,15 @@ function Home() {
     Welkom bij <span className="text-red-400 font-semibold">FilmGuru</span>, 
     de nummer 1 website voor het inzien van films.
   </p>
+
+  <div className='moviesContainer w-full flex justify-evenly '>
+  <Movie title="spiderman" genre="actie" review="9.6" image=""/>
+  <Movie title="The Hobbit" genre="fantasy" review="8.5" image=""/>
+  <Movie title="The Dark Knight" genre="actie" review="9.3" image=""/>
+  </div>
+
+  {/* vul het bovenste component aan met review, image. Zorg dat het nu op het scherm komt te staan.
+  nu je de data hebt, is het de bedoeling dat je de movie styled. De styling doe je in Movies.jsx */}
 </section>
   )
 }
