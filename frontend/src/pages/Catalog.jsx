@@ -1,22 +1,10 @@
 import { useState } from "react";
 
 const Catalog = () => {
-    return (  
-<section className="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center text-center p-6">
-  <h1 className="text-4xl md:text-5xl font-bold mb-4">Onze Catalogus</h1>
-  <p className="text-lg md:text-xl max-w-2xl">
-   Op deze pagina kunt uw onze prachtige en <span className="text-red-400 font-semibold">sappige </span>
-    catalogus van films inzien.
-  </p>
-</section>
-    );
-}
- 
-  const [selectedGenre, setSelectedGenre] = useState("All");
+  const [selectedGenre, setSelectedGenre] = useState("Alle");
 
   // Placeholders totdat mongoDB is verwerkt
   const genres = ["Alle", "Genre1", "Genre2", "Genre3", "Genre4", "Dit zijn placeholders"];
-
 
   const handleGenreChange = (genre) => {
     setSelectedGenre(genre);
