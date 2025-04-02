@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Catalog = () => {
-  const [selectedGenre, setSelectedGenre] = useState("Alle");
+  const [selectedGenre, setSelectedGenre] = useState("All");
 
   // Placeholders totdat mongoDB is verwerkt
   const genres = ["Alle", "Genre1", "Genre2", "Genre3", "Genre4", "Dit zijn placeholders"];
