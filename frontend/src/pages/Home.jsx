@@ -1,5 +1,6 @@
 import Movie from '../components/Movie'
 
+
 function Home() {
 
   return (
@@ -10,10 +11,15 @@ function Home() {
     de nummer 1 website voor het inzien van films.
   </p>
 
-  <div className='moviesContainer w-full flex justify-evenly '>
-  <Movie title="spiderman" genre="actie" review="9.6" image=""/>
+  <div className='moviesContainer w-full flex justify-evenly m-6 '>
+  <Movie title="Spiderman" genre="actie" review="9.6" image=""/>
   <Movie title="The Hobbit" genre="fantasy" review="8.5" image=""/>
   <Movie title="The Dark Knight" genre="actie" review="9.3" image=""/>
+  </div>
+
+  <div className='CatalogRoute flex justify-center'>
+  <a href="
+  /catalog" class="bg-red-500 hover:bg-red-700 ... rounded m-8 p-5">Go to catalog</a>
   </div>
 
   {/* vul het bovenste component aan met review, image. Zorg dat het nu op het scherm komt te staan.
